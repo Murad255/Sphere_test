@@ -35,8 +35,16 @@
             this.valueY = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.canA = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.valueA = new System.Windows.Forms.TextBox();
+            this.valueB = new System.Windows.Forms.TextBox();
+            this.canB = new System.Windows.Forms.Label();
+            this.valueC = new System.Windows.Forms.TextBox();
+            this.canC = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // bSet
@@ -109,11 +117,84 @@
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
             // 
+            // canA
+            // 
+            this.canA.AutoSize = true;
+            this.canA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.canA.Location = new System.Drawing.Point(6, 36);
+            this.canA.Name = "canA";
+            this.canA.Size = new System.Drawing.Size(59, 24);
+            this.canA.TabIndex = 6;
+            this.canA.Text = "canA:";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.valueC);
+            this.groupBox2.Controls.Add(this.canC);
+            this.groupBox2.Controls.Add(this.valueB);
+            this.groupBox2.Controls.Add(this.canB);
+            this.groupBox2.Controls.Add(this.valueA);
+            this.groupBox2.Controls.Add(this.canA);
+            this.groupBox2.Location = new System.Drawing.Point(560, 272);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 162);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Углы";
+            // 
+            // valueA
+            // 
+            this.valueA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.valueA.Location = new System.Drawing.Point(71, 36);
+            this.valueA.Multiline = true;
+            this.valueA.Name = "valueA";
+            this.valueA.Size = new System.Drawing.Size(90, 31);
+            this.valueA.TabIndex = 7;
+            // 
+            // valueB
+            // 
+            this.valueB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.valueB.Location = new System.Drawing.Point(71, 73);
+            this.valueB.Multiline = true;
+            this.valueB.Name = "valueB";
+            this.valueB.Size = new System.Drawing.Size(90, 31);
+            this.valueB.TabIndex = 9;
+            // 
+            // canB
+            // 
+            this.canB.AutoSize = true;
+            this.canB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.canB.Location = new System.Drawing.Point(6, 73);
+            this.canB.Name = "canB";
+            this.canB.Size = new System.Drawing.Size(58, 24);
+            this.canB.TabIndex = 8;
+            this.canB.Text = "canB:";
+            // 
+            // valueC
+            // 
+            this.valueC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.valueC.Location = new System.Drawing.Point(71, 110);
+            this.valueC.Multiline = true;
+            this.valueC.Name = "valueC";
+            this.valueC.Size = new System.Drawing.Size(90, 31);
+            this.valueC.TabIndex = 11;
+            // 
+            // canC
+            // 
+            this.canC.AutoSize = true;
+            this.canC.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.canC.Location = new System.Drawing.Point(6, 110);
+            this.canC.Name = "canC";
+            this.canC.Size = new System.Drawing.Size(59, 24);
+            this.canC.TabIndex = 10;
+            this.canC.Text = "canC:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(813, 525);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
@@ -121,6 +202,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -134,6 +217,13 @@
         private System.Windows.Forms.TextBox valueY;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label canA;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox valueC;
+        private System.Windows.Forms.Label canC;
+        private System.Windows.Forms.TextBox valueB;
+        private System.Windows.Forms.Label canB;
+        private System.Windows.Forms.TextBox valueA;
     }
 }
 

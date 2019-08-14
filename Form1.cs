@@ -15,6 +15,8 @@ namespace Sphere_test
     {
         const int maxX = 505;
         const int maxY = 505;
+        private static Dec axisB, axisC;
+
         public Form1()
         {
             InitializeComponent();
@@ -100,11 +102,23 @@ namespace Sphere_test
 
                 DrawLine(0, 0, (int)dec.decY, (int)dec.decZ);
                 DrawLine((int)dec.decY, (int)dec.decZ, decX, decY);
+
+                axisB =  dec;
+
+
+                var AC = Math.Sqrt(decX * decX + decY * decY);
+           
+                int CanB = Convert.ToInt32(Math.Acos(axisB.decY / Shape.L1) * 180 / Math.PI);
+                valueB.Text = CanB.ToString();
+                
+                int CanC =180-Convert.ToInt32(Math.Acos((AC * AC - Shape.L1 * Shape.L1 - Shape.L2 * Shape.L2) / (2 * Shape.L1 * Shape.L2)) * 180 / Math.PI);
+                valueC.Text = CanC.ToString();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Text = "Ошибка!!!";
+                Text = e.ToString();
             }
         }
+
     }
 }
