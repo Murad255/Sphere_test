@@ -37,19 +37,21 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.canA = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.valueA = new System.Windows.Forms.TextBox();
-            this.valueB = new System.Windows.Forms.TextBox();
-            this.canB = new System.Windows.Forms.Label();
             this.valueC = new System.Windows.Forms.TextBox();
             this.canC = new System.Windows.Forms.Label();
+            this.valueB = new System.Windows.Forms.TextBox();
+            this.canB = new System.Windows.Forms.Label();
+            this.valueA = new System.Windows.Forms.TextBox();
+            this.T_degreeB = new System.Windows.Forms.TrackBar();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.T_degreeB)).BeginInit();
             this.SuspendLayout();
             // 
             // bSet
             // 
-            this.bSet.Location = new System.Drawing.Point(9, 133);
+            this.bSet.Location = new System.Drawing.Point(10, 281);
             this.bSet.Name = "bSet";
             this.bSet.Size = new System.Drawing.Size(181, 49);
             this.bSet.TabIndex = 0;
@@ -77,6 +79,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.T_degreeB);
             this.groupBox1.Controls.Add(this.valueY);
             this.groupBox1.Controls.Add(this.bSet);
             this.groupBox1.Controls.Add(this.label2);
@@ -84,7 +87,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(560, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 188);
+            this.groupBox1.Size = new System.Drawing.Size(200, 336);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Управление";
@@ -135,40 +138,12 @@
             this.groupBox2.Controls.Add(this.canB);
             this.groupBox2.Controls.Add(this.valueA);
             this.groupBox2.Controls.Add(this.canA);
-            this.groupBox2.Location = new System.Drawing.Point(560, 272);
+            this.groupBox2.Location = new System.Drawing.Point(560, 351);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 162);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Углы";
-            // 
-            // valueA
-            // 
-            this.valueA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.valueA.Location = new System.Drawing.Point(71, 36);
-            this.valueA.Multiline = true;
-            this.valueA.Name = "valueA";
-            this.valueA.Size = new System.Drawing.Size(90, 31);
-            this.valueA.TabIndex = 7;
-            // 
-            // valueB
-            // 
-            this.valueB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.valueB.Location = new System.Drawing.Point(71, 73);
-            this.valueB.Multiline = true;
-            this.valueB.Name = "valueB";
-            this.valueB.Size = new System.Drawing.Size(90, 31);
-            this.valueB.TabIndex = 9;
-            // 
-            // canB
-            // 
-            this.canB.AutoSize = true;
-            this.canB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.canB.Location = new System.Drawing.Point(6, 73);
-            this.canB.Name = "canB";
-            this.canB.Size = new System.Drawing.Size(58, 24);
-            this.canB.TabIndex = 8;
-            this.canB.Text = "canB:";
             // 
             // valueC
             // 
@@ -189,6 +164,42 @@
             this.canC.TabIndex = 10;
             this.canC.Text = "canC:";
             // 
+            // valueB
+            // 
+            this.valueB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.valueB.Location = new System.Drawing.Point(71, 73);
+            this.valueB.Multiline = true;
+            this.valueB.Name = "valueB";
+            this.valueB.Size = new System.Drawing.Size(90, 31);
+            this.valueB.TabIndex = 9;
+            // 
+            // canB
+            // 
+            this.canB.AutoSize = true;
+            this.canB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.canB.Location = new System.Drawing.Point(6, 73);
+            this.canB.Name = "canB";
+            this.canB.Size = new System.Drawing.Size(58, 24);
+            this.canB.TabIndex = 8;
+            this.canB.Text = "canB:";
+            // 
+            // valueA
+            // 
+            this.valueA.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.valueA.Location = new System.Drawing.Point(71, 36);
+            this.valueA.Multiline = true;
+            this.valueA.Name = "valueA";
+            this.valueA.Size = new System.Drawing.Size(90, 31);
+            this.valueA.TabIndex = 7;
+            // 
+            // T_degreeB
+            // 
+            this.T_degreeB.Location = new System.Drawing.Point(6, 152);
+            this.T_degreeB.Maximum = 180;
+            this.T_degreeB.Name = "T_degreeB";
+            this.T_degreeB.Size = new System.Drawing.Size(177, 45);
+            this.T_degreeB.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +215,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.T_degreeB)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -224,6 +236,7 @@
         private System.Windows.Forms.TextBox valueB;
         private System.Windows.Forms.Label canB;
         private System.Windows.Forms.TextBox valueA;
+        private System.Windows.Forms.TrackBar T_degreeB;
     }
 }
 

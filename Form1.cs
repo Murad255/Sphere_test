@@ -15,6 +15,8 @@ namespace Sphere_test
     {
         const int maxX = 505;
         const int maxY = 505;
+        const int L3 = 130; // CB, mm.
+
         private static Dec axisB, axisC;
 
         public Form1()
@@ -59,7 +61,7 @@ namespace Sphere_test
 
             Drav(decX, decY);
         }
-
+        //Рисует круг
         private void DrawCircle(int cordX, int cordY, int rad)
         {
             Graphics cr = pictureBox1.CreateGraphics();
@@ -70,6 +72,7 @@ namespace Sphere_test
             Graphics cr = pictureBox1.CreateGraphics();
             cr.DrawEllipse(pen, cordX + ((maxX - 1) / 2) - rad, maxY - (cordY + ((maxY - 1) / 2) + rad), rad * 2, rad * 2);
         }
+
         private void DrawLine(int X1, int Y1, int X2, int Y2)
         {
             Graphics lr = pictureBox1.CreateGraphics();
@@ -91,19 +94,29 @@ namespace Sphere_test
                 gr.DrawLine(new Pen(Brushes.Black), 0, (maxY - 1) / 2 + 1, maxX, (maxY - 1) / 2 + 1);
                 gr.DrawLine(new Pen(Brushes.Black), (maxX - 1) / 2 + 1, 0, (maxX - 1) / 2 + 1, maxY);
 
-                //Рисует круг
+                axisC = new Dec();
+                axisC.decZ = decY + Math.Sin(T_degreeB.Value * 180 / Math.PI)  * L3; //coord Y
+                axisC.pXY = decX + Math.Cos(T_degreeB.Value * 180 / Math.PI)  * L3;  //coord X
+
+                axisB = Shape.Algoritm(axisC); // axisB.decY= coord X, axisB.decZ= coord Y
+
+                
+
                 DrawCircle(0, 0, Convert.ToInt32(Shape.L1));
-                DrawCircle(decX, decY, Convert.ToInt32(Shape.L2), new Pen(Brushes.Blue));
-                Dec dec = Shape.Algoritm(new Dec(0, Convert.ToDouble(decX), Convert.ToDouble(decY)));
-
-                DrawCircle((int)dec.decY, (int)dec.decZ, 3, new Pen(Brushes.Black));
                 DrawCircle(0, 0, 3, new Pen(Brushes.Black));
+                
                 DrawCircle(decX, decY, 3, new Pen(Brushes.Black));
+                DrawCircle(decX, decY, Convert.ToInt32(L3), new Pen(Brushes.Blue));
 
-                DrawLine(0, 0, (int)dec.decY, (int)dec.decZ);
-                DrawLine((int)dec.decY, (int)dec.decZ, decX, decY);
+                DrawCircle((int)axisB.pXY, (int)axisB.decZ, 3, new Pen(Brushes.Black));
 
-                axisB =  dec;
+                DrawCircle((int)axisC.pXY, (int)axisC.decZ, 3, new Pen(Brushes.Black));
+                DrawCircle((int)axisC.pXY, (int)axisC.decZ, Convert.ToInt32(Shape.L2), new Pen(Brushes.Black));
+               
+
+                DrawLine(0, 0, (int)axisB.pXY, (int)axisB.decZ);
+                DrawLine((int)axisB.pXY, (int)axisB.decZ, (int)axisC.pXY, (int)axisC.decZ);
+                DrawLine((int)axisC.pXY, (int)axisC.decZ, decX, decY);
 
 
                 var AC = Math.Sqrt(decX * decX + decY * decY);
