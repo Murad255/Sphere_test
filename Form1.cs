@@ -13,8 +13,8 @@ namespace Sphere_test
 {
     public partial class Form1 : Form
     {
-        const int maxX = 505;
-        const int maxY = 505;
+        const int maxX = 765;
+        const int maxY = 765;
         const int L3 = 130; // CB, mm.
 
         private static Dec axisB, axisC;
@@ -65,7 +65,7 @@ namespace Sphere_test
         private void DrawCircle(int cordX, int cordY, int rad)
         {
             Graphics cr = pictureBox1.CreateGraphics();
-            cr.DrawEllipse(new Pen(Brushes.Red), cordX+((maxX-1)/2)-rad,maxY-(cordY + ((maxY - 1) / 2)+rad), rad*2, rad*2);
+            cr.DrawEllipse(new Pen(Brushes.Black), cordX+((maxX-1)/2)-rad,maxY-(cordY + ((maxY - 1) / 2)+rad), rad*2, rad*2);
         }
         private void DrawCircle(int cordX, int cordY, int rad, Pen pen)
         {
@@ -82,6 +82,33 @@ namespace Sphere_test
                                                 maxY - (Y2 + ((maxY - 1) / 2)));
         }
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A)
+            {
+                if (T_degreeB.Value != T_degreeB.Minimum)
+                {
+                    T_degreeB.Value -= 1;
+                    bSet_Click(sender, e);
+                }
+            }
+            if (e.KeyCode == Keys.D)
+            {
+                if (T_degreeB.Value != T_degreeB.Maximum)
+                {
+                    T_degreeB.Value += 1;
+                    bSet_Click(sender, e);
+                }
+            }
+        }
+
+        private void T_degreeB_Scroll(object sender, EventArgs e)
+        {
+            int decX = Convert.ToInt32(valueX.Text);
+            int decY = Convert.ToInt32(valueY.Text);
+            Drav(decX, decY);
+        }
+
         private void Drav(int decX, int decY)
         {
             try
@@ -95,37 +122,36 @@ namespace Sphere_test
                 gr.DrawLine(new Pen(Brushes.Black), (maxX - 1) / 2 + 1, 0, (maxX - 1) / 2 + 1, maxY);
 
                 axisC = new Dec();
-                axisC.decZ = decY + Math.Sin(T_degreeB.Value * 180 / Math.PI)  * L3; //coord Y
-                axisC.pXY = decX + Math.Cos(T_degreeB.Value * 180 / Math.PI)  * L3;  //coord X
+                axisC.decZ = decY + Math.Sin(-(T_degreeB.Value+90) * Math.PI / 180) * L3; //coord Y
+                axisC.decY = decX + Math.Cos(-(T_degreeB.Value +90) * Math.PI / 180)  * L3;  //coord X
+                axisC.update_pXY();
 
                 axisB = Shape.Algoritm(axisC); // axisB.decY= coord X, axisB.decZ= coord Y
-
                 
-
-                DrawCircle(0, 0, Convert.ToInt32(Shape.L1));
-                DrawCircle(0, 0, 3, new Pen(Brushes.Black));
                 
-                DrawCircle(decX, decY, 3, new Pen(Brushes.Black));
+                DrawCircle(0, 0, Convert.ToInt32(Shape.L1), new Pen(Brushes.Red));
+                DrawCircle((int)axisC.pXY, (int)axisC.decZ, Convert.ToInt32(Shape.L2), new Pen(Brushes.GreenYellow));
                 DrawCircle(decX, decY, Convert.ToInt32(L3), new Pen(Brushes.Blue));
 
-                DrawCircle((int)axisB.pXY, (int)axisB.decZ, 3, new Pen(Brushes.Black));
-
-                DrawCircle((int)axisC.pXY, (int)axisC.decZ, 3, new Pen(Brushes.Black));
-                DrawCircle((int)axisC.pXY, (int)axisC.decZ, Convert.ToInt32(Shape.L2), new Pen(Brushes.Black));
-               
-
                 DrawLine(0, 0, (int)axisB.pXY, (int)axisB.decZ);
-                DrawLine((int)axisB.pXY, (int)axisB.decZ, (int)axisC.pXY, (int)axisC.decZ);
-                DrawLine((int)axisC.pXY, (int)axisC.decZ, decX, decY);
+                DrawLine((int)axisB.decY, (int)axisB.decZ, (int)axisC.decY, (int)axisC.decZ);
+                DrawLine((int)axisC.decY, (int)axisC.decZ, decX, decY);
 
+                DrawCircle(0, 0, 3, new Pen(Brushes.Black));
+                DrawCircle((int)axisB.decY, (int)axisB.decZ, 3);
+                DrawCircle((int)axisC.decY, (int)axisC.decZ, 3);
+                DrawCircle(decX, decY, 3);
 
-                var AC = Math.Sqrt(decX * decX + decY * decY);
+                var AC = Math.Sqrt(axisC.decZ * axisC.decZ + axisC.decY * axisC.decY);
            
                 int CanB = Convert.ToInt32(Math.Acos(axisB.decY / Shape.L1) * 180 / Math.PI);
-                valueB.Text = CanB.ToString();
+                valueQ2.Text = CanB.ToString();
                 
                 int CanC =180-Convert.ToInt32(Math.Acos((AC * AC - Shape.L1 * Shape.L1 - Shape.L2 * Shape.L2) / (2 * Shape.L1 * Shape.L2)) * 180 / Math.PI);
-                valueC.Text = CanC.ToString();
+                valueQ3.Text = CanC.ToString();
+
+                int CanD = -90 + CanB + CanC + T_degreeB.Value;
+                valueQ4.Text = CanD.ToString();
             }
             catch (Exception e)
             {
