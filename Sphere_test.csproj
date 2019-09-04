@@ -80,7 +80,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Servo_Manipulator_COM\координата_пересечения_шаров\Intersection.csproj">
+    <ProjectReference Include="C:\Users\Tablet\OneDrive\repos\Murad255\Manipulator_COM-port_controller\координата_пересечения_шаров\Intersection.csproj">
       <Project>{b23dc9ea-c4fc-4549-b145-024aeedc8542}</Project>
       <Name>Intersection</Name>
     </ProjectReference>

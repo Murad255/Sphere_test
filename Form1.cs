@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Intersection;
@@ -16,7 +11,7 @@ namespace Sphere_test
         const int maxX = 765;
         const int maxY = 765;
         const int L3 = 130; // CB, mm.
-
+        
         private static Dec axisB, axisC;
 
         public Form1()
@@ -25,8 +20,6 @@ namespace Sphere_test
  
         }
 
-        
- 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             int decX = e.X - maxX / 2;
@@ -117,6 +110,7 @@ namespace Sphere_test
 
                 Graphics gr = pictureBox1.CreateGraphics();
                 gr.Clear(Color.White);
+
                 //Рисует систему координат
                 gr.DrawLine(new Pen(Brushes.Black), 0, (maxY - 1) / 2 + 1, maxX, (maxY - 1) / 2 + 1);
                 gr.DrawLine(new Pen(Brushes.Black), (maxX - 1) / 2 + 1, 0, (maxX - 1) / 2 + 1, maxY);
@@ -127,16 +121,20 @@ namespace Sphere_test
                 axisC.update_pXY();
 
                 axisB = Shape.Algoritm(axisC); // axisB.decY= coord X, axisB.decZ= coord Y
-                
-                
+
+                //отрисовка кругов
                 DrawCircle(0, 0, Convert.ToInt32(Shape.L1), new Pen(Brushes.Red));
-                DrawCircle((int)axisC.pXY, (int)axisC.decZ, Convert.ToInt32(Shape.L2), new Pen(Brushes.GreenYellow));
+                DrawCircle( (int)axisC.decY, (int)axisC.decZ,
+                            Convert.ToInt32(Shape.L2),
+                            new Pen(Brushes.GreenYellow));
                 DrawCircle(decX, decY, Convert.ToInt32(L3), new Pen(Brushes.Blue));
 
-                DrawLine(0, 0, (int)axisB.pXY, (int)axisB.decZ);
+                //отрисовка линий
+                DrawLine(0, 0, (int)axisB.decY, (int)axisB.decZ);
                 DrawLine((int)axisB.decY, (int)axisB.decZ, (int)axisC.decY, (int)axisC.decZ);
                 DrawLine((int)axisC.decY, (int)axisC.decZ, decX, decY);
-
+                
+                //отрисовка точек
                 DrawCircle(0, 0, 3, new Pen(Brushes.Black));
                 DrawCircle((int)axisB.decY, (int)axisB.decZ, 3);
                 DrawCircle((int)axisC.decY, (int)axisC.decZ, 3);
