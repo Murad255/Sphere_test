@@ -122,22 +122,26 @@ namespace Sphere_test
 
                 axisB = Shape.Algoritm(axisC); // axisB.decY= coord X, axisB.decZ= coord Y
 
+                var Bx = Convert.ToInt32( axisB.decY);
+                var By = Convert.ToInt32(axisB.decZ);
+
+                var Cx = Convert.ToInt32(axisC.decY);
+                var Cy = Convert.ToInt32(axisC.decZ);
+
                 //отрисовка кругов
                 DrawCircle(0, 0, Convert.ToInt32(Shape.L1), new Pen(Brushes.Red));
-                DrawCircle( (int)axisC.decY, (int)axisC.decZ,
-                            Convert.ToInt32(Shape.L2),
-                            new Pen(Brushes.GreenYellow));
+                DrawCircle( Cx,Cy, Convert.ToInt32(Shape.L2),new Pen(Brushes.GreenYellow));
                 DrawCircle(decX, decY, Convert.ToInt32(L3), new Pen(Brushes.Blue));
 
                 //отрисовка линий
-                DrawLine(0, 0, (int)axisB.decY, (int)axisB.decZ);
-                DrawLine((int)axisB.decY, (int)axisB.decZ, (int)axisC.decY, (int)axisC.decZ);
-                DrawLine((int)axisC.decY, (int)axisC.decZ, decX, decY);
+                DrawLine(0, 0, Bx,By);
+                DrawLine(Bx,By,Cx,Cy);
+                DrawLine(Cx,Cy,decX,decY);
                 
                 //отрисовка точек
                 DrawCircle(0, 0, 3, new Pen(Brushes.Black));
-                DrawCircle((int)axisB.decY, (int)axisB.decZ, 3);
-                DrawCircle((int)axisC.decY, (int)axisC.decZ, 3);
+                DrawCircle(Bx,By, 3);
+                DrawCircle(Cx,Cy, 3);
                 DrawCircle(decX, decY, 3);
 
                 var AC = Math.Sqrt(axisC.decZ * axisC.decZ + axisC.decY * axisC.decY);
