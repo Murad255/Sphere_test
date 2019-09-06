@@ -26,3 +26,17 @@ D:\Documents\GitHub\Sphere_test\obj\Debug\Sphere_test.csproj.CoreCompileInputs.c
 D:\Documents\GitHub\Sphere_test\obj\Debug\Sphere_test.csproj.CopyComplete
 D:\Documents\GitHub\Sphere_test\obj\Debug\Sphere_test.exe
 D:\Documents\GitHub\Sphere_test\obj\Debug\Sphere_test.pdb
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\Sphere_test.exe.config
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\Sphere_test.exe
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\Sphere_test.pdb
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\координата_пересечения_шаров.exe
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\координата_пересечения_шаров.pdb
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\координата_пересечения_шаров.exe.config
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.csprojAssemblyReference.cache
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.Form1.resources
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.Properties.Resources.resources
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.csproj.GenerateResource.cache
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.csproj.CoreCompileInputs.cache
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.csproj.CopyComplete
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.exe
+C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.pdb
