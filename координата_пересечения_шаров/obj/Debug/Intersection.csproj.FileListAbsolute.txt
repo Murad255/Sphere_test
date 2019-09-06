@@ -1,0 +1,14 @@
+C:\Users\murad\source\repos\Servo_Manipulator_COM\координата_пересечения_шаров\bin\Debug\координата_пересечения_шаров.exe.config
+C:\Users\murad\source\repos\Servo_Manipulator_COM\координата_пересечения_шаров\bin\Debug\координата_пересечения_шаров.exe
+C:\Users\murad\source\repos\Servo_Manipulator_COM\координата_пересечения_шаров\bin\Debug\координата_пересечения_шаров.pdb
+C:\Users\murad\source\repos\Servo_Manipulator_COM\координата_пересечения_шаров\obj\Debug\Intersection.csprojAssemblyReference.cache
+C:\Users\murad\source\repos\Servo_Manipulator_COM\координата_пересечения_шаров\obj\Debug\Intersection.csproj.CoreCompileInputs.cache
+C:\Users\murad\source\repos\Servo_Manipulator_COM\координата_пересечения_шаров\obj\Debug\координата_пересечения_шаров.exe
+C:\Users\murad\source\repos\Servo_Manipulator_COM\координата_пересечения_шаров\obj\Debug\координата_пересечения_шаров.pdb
+C:\Users\murad\source\repos\Sphere_test\координата_пересечения_шаров\bin\Debug\координата_пересечения_шаров.exe.config
+C:\Users\murad\source\repos\Sphere_test\координата_пересечения_шаров\bin\Debug\координата_пересечения_шаров.exe
+C:\Users\murad\source\repos\Sphere_test\координата_пересечения_шаров\bin\Debug\координата_пересечения_шаров.pdb
+C:\Users\murad\source\repos\Sphere_test\координата_пересечения_шаров\obj\Debug\Intersection.csprojAssemblyReference.cache
+C:\Users\murad\source\repos\Sphere_test\координата_пересечения_шаров\obj\Debug\Intersection.csproj.CoreCompileInputs.cache
+C:\Users\murad\source\repos\Sphere_test\координата_пересечения_шаров\obj\Debug\координата_пересечения_шаров.exe
+C:\Users\murad\source\repos\Sphere_test\координата_пересечения_шаров\obj\Debug\координата_пересечения_шаров.pdb
