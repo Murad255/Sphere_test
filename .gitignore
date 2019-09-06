@@ -1,0 +1,8 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Sphere_test/v15/Server/sqlite3/db.lock
+/.vs/Sphere_test/v15/Server/sqlite3/storage.ide
+/.vs/Sphere_test/v15/Server/sqlite3/storage.ide-shm
+/.vs/Sphere_test/v15/Server/sqlite3/storage.ide-wal
