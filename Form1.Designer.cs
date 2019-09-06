@@ -76,6 +76,7 @@
             this.valueX.Name = "valueX";
             this.valueX.Size = new System.Drawing.Size(143, 38);
             this.valueX.TabIndex = 3;
+            this.valueX.Text = "0";
             // 
             // groupBox1
             // 
@@ -108,6 +109,7 @@
             this.valueY.Name = "valueY";
             this.valueY.Size = new System.Drawing.Size(143, 38);
             this.valueY.TabIndex = 5;
+            this.valueY.Text = "0";
             // 
             // label2
             // 
