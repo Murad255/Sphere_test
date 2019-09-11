@@ -54,7 +54,12 @@ namespace Sphere_test
 
             Drav(decX, decY);
         }
-        //Рисует круг
+         /// <summary>
+        /// Рисует круг
+        /// </summary>
+        /// <param name="cordX"></param>
+        /// <param name="cordY"></param>
+        /// <param name="rad"></param>
         private void DrawCircle(int cordX, int cordY, int rad)
         {
             Graphics cr = pictureBox1.CreateGraphics();
@@ -101,6 +106,8 @@ namespace Sphere_test
             int decY = Convert.ToInt32(valueY.Text);
             Drav(decX, decY);
         }
+
+      
 
         private void Drav(int decX, int decY)
         {
@@ -154,6 +161,18 @@ namespace Sphere_test
 
                 int CanD = -90 + CanB + CanC + T_degreeB.Value;
                 valueQ4.Text = CanD.ToString();
+                int CanA = 0;
+                Dec textDec = new Dec();
+                var D1 = Math.Cos(CanB * Math.PI / 180) * Shape.L1;
+                var D2 = Math.Cos((CanB + CanC-180) * Math.PI / 180) * Shape.L2;
+                var D3 = Math.Cos((CanB + CanC + CanD-360) * Math.PI / 180) * L3;
+                textDec.pXY = D1 + D2;// + D3;
+                textDec.decX = 0;//Math.Sin(CanA * Math.PI / 180) * textDec.pXY;
+                textDec.decY= Math.Cos(CanA * Math.PI / 180) * textDec.pXY;
+                textDec.decB = (CanD + 90 - CanB - CanC)%360;
+                textBoxY.Text =( (int)textDec.decY).ToString();
+                textBoxZ.Text = ((int)textDec.decZ).ToString();
+                textBoxB.Text = ((int)textDec.decB).ToString();
             }
             catch (Exception e)
             {

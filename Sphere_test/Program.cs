@@ -12,6 +12,7 @@ namespace Sphere_test
         /// Главная точка входа для приложения.
         /// </summary>
         [STAThread]
+   
         static void Main()
         {
             Application.EnableVisualStyles();
