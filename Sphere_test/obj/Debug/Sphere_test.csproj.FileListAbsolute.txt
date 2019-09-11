@@ -29,9 +29,6 @@ D:\Documents\GitHub\Sphere_test\obj\Debug\Sphere_test.pdb
 C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\Sphere_test.exe.config
 C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\Sphere_test.exe
 C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\Sphere_test.pdb
-C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\координата_пересечения_шаров.exe
-C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\координата_пересечения_шаров.pdb
-C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\координата_пересечения_шаров.exe.config
 C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.csprojAssemblyReference.cache
 C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.Form1.resources
 C:\Users\murad\source\repos\Sphere_test\Sphere_test\Sphere_test\obj\Debug\Sphere_test.Properties.Resources.resources
@@ -54,3 +51,5 @@ C:\Users\Tablet\source\repos\Murad255\Sphere_test\Sphere_test\obj\Debug\Sphere_t
 C:\Users\Tablet\source\repos\Murad255\Sphere_test\Sphere_test\obj\Debug\Sphere_test.csproj.CopyComplete
 C:\Users\Tablet\source\repos\Murad255\Sphere_test\Sphere_test\obj\Debug\Sphere_test.exe
 C:\Users\Tablet\source\repos\Murad255\Sphere_test\Sphere_test\obj\Debug\Sphere_test.pdb
+C:\Users\murad\Source\Repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\ClassLibrary1.dll
+C:\Users\murad\Source\Repos\Sphere_test\Sphere_test\Sphere_test\bin\Debug\ClassLibrary1.pdb

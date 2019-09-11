@@ -1,0 +1,6 @@
+C:\Users\murad\Source\Repos\Sphere_test\Sphere_test\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\murad\Source\Repos\Sphere_test\Sphere_test\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\murad\Source\Repos\Sphere_test\Sphere_test\ClassLibrary1\obj\Debug\Intersection_lib.csprojAssemblyReference.cache
+C:\Users\murad\Source\Repos\Sphere_test\Sphere_test\ClassLibrary1\obj\Debug\Intersection_lib.csproj.CoreCompileInputs.cache
+C:\Users\murad\Source\Repos\Sphere_test\Sphere_test\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\murad\Source\Repos\Sphere_test\Sphere_test\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
